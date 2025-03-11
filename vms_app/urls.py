@@ -41,7 +41,7 @@ urlpatterns = [
     path("vms/auth/reset_password_send_email/", password_reset_send_email, name="reset_password"),
     path("vms/auth/reset_password_success/", password_reset_success_view, name="password_reset_success"),
     path("vms/auth/permissions/", PermissionListViewSet.as_view(), name="permissions"),
-    path("vms/auth/me/permissions/", get_current_user_perms, name="current_user_permissions"),
+    path("vms/auth/users/<int:pk>/permissions/", get_current_user_perms, name="current_user_permissions"),
 
     # -------- urls related to client model ----------
     path("vms/api/clients/", ClientListView.as_view(), name="clients_list"),
