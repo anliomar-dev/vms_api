@@ -115,7 +115,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 @permission_classes([IsAuthenticated])
-def get_current_user_perms(request, pk):
+def get_user_perms(request, pk):
     try:
         user = User.objects.get(pk=pk)
         user_perms = Permission.objects.filter(user=user).values_list('codename', flat=True)
