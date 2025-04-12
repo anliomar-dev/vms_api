@@ -6,7 +6,7 @@ from django.utils import timezone
 from django.utils.timezone import localtime
 from drf_spectacular.utils import extend_schema_field
 from rest_framework import serializers
-
+"""changements"""
 
 class Company(models.Model):
     company_name = models.CharField(max_length=70)
